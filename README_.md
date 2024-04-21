@@ -22,5 +22,7 @@ $config = ['driver' => ['type' => 'array_file, source' => '../source.txt']; // d
 $driverFactory = new DriverFactory($config);
 $repository = new MovieRepository($driverFactory->getAdapterDriver());
 
-$repository->
+$repository->findWordsMoreOne();
+$repository->findFirstWEventCountLetterCount();
+$repository->find3Random();
 ````
