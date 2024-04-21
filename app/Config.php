@@ -1,6 +1,6 @@
 <?php
 
-namespace MichalM;
+namespace App\MichalM;
 
 class Config
 {

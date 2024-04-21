@@ -1,0 +1,28 @@
+{
+    "name": "commitm/zadmor",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michał Materniak"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": false,
+    "require": {
+        "php": "8.3.4"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.0",
+        "phpunit/phpunit": "11.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MichalM\\": "src/"        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TestMichalM\\": "tests/"
+        }
+    }
+}

@@ -3,12 +3,12 @@
     "prefer-stable": true,
     "repositories": [
         {
-            "type": "path",
-            "url": "lib/zadmor"
+            "type": "vcs",
+            "url": "https://github.com/michalmaterniak/zadmor"
         }
     ],
     "require": {
-        "commitm/zadmor": "@dev"
+        "commitm/zadmor": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^7.0",
@@ -16,14 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\MichalM\\": "app/",
-            "MichalM\\": "lib/zadmor/src/"
+            "App\\MichalM\\": "app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "TestApp\\MichalM\\": "tests/",
-            "TestMichalM\\": "lib/zadmor/tests/"
+            "TestMichalM\\": "vendor/commitm/zadmor/tests/"
         }
     },
     "scripts": {
