@@ -7,7 +7,7 @@ try {
 
     dump($movieRepository->findWordsMoreOne());
     dump($movieRepository->findFirstWEventCountLetterCount());
-    dump($movieRepository->get3Random());
+    dump($movieRepository->find3Random());
 } catch (\MichalM\ZadmorException $exception) {
     echo $exception->getMessage();
 }

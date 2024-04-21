@@ -16,14 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\MichalM\\": "app/",
-            "MichalM\\": "lib/zadmor/src/"
+            "App\\MichalM\\": "app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "TestApp\\MichalM\\": "tests/",
-            "TestMichalM\\": "lib/zadmor/tests/"
+            "TestMichalM\\": "vendor/commitm/zadmor/tests/"
         }
     },
     "scripts": {

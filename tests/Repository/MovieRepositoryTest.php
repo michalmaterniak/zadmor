@@ -4,6 +4,7 @@ namespace TestApp\MichalM\Repository;
 
 use App\MichalM\Repository\Movie\MovieRepository;
 use MichalM\Drivers\ArrayFileAdapterDriver;
+use MichalM\ZadmorException;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -46,5 +47,12 @@ class MovieRepositoryTest extends TestCase
         foreach ($collection as $index => $movie) {
             $this->assertSame($expected[$index], $collection->get($index)->getTitle());
         }
+    }
+
+    #[DataProvider('getResultsCount')]
+    public function testCount(int $nrSuite, int $count)
+    {
+        $this->expectException(ZadmorException::class);
+        $this->getRepository($nrSuite)->random($count);
     }
 }

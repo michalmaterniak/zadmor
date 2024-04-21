@@ -5,9 +5,13 @@ namespace App\MichalM\Repository\Movie;
 use App\MichalM\Repository\Movie\Filters\EvenCountLettersFilter;
 use App\MichalM\Repository\Movie\Filters\FirstWLetterFilter;
 use App\MichalM\Repository\Movie\Filters\MoreThanOneWordsFilter;
+use MichalM\Repository\Filters\Filter;
 use MichalM\Repository\Repository;
 use MichalM\ZadmorException;
 
+/**
+ * @method MovieCollection filter(Filter ...$filters)
+ */
 class MovieRepository extends Repository
 {
     public function getEmptyArray(): MovieCollection
@@ -42,7 +46,7 @@ class MovieRepository extends Repository
     /**
      * Zwracane są 3 losowe tytuły.
      */
-    public function get3Random(): MovieCollection
+    public function find3Random(): MovieCollection
     {
         return $this->random(3);
     }
@@ -58,7 +62,7 @@ class MovieRepository extends Repository
     /**
      * Zwracany są wszystkie tytuły, które składają się z więcej niż 1 słowa.
      */
-    public function findWordsMoreOne()
+    public function findWordsMoreOne(): MovieCollection
     {
         return $this->filter(new MoreThanOneWordsFilter());
     }

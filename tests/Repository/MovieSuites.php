@@ -13,6 +13,18 @@ trait MovieSuites
         ];
     }
 
+    public static function getResultsCount(): array
+    {
+        $array = self::getResults();
+        $return = [];
+
+        foreach ($array as $item) {
+            $return[] = [$item[0], $item[1] + 1]; // o jeden wiecej to error
+        }
+
+        return $return;
+    }
+
     public static function getFirsLetterEvenCountLetters(): array
     {
         return [
