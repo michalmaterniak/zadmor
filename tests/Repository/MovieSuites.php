@@ -1,6 +1,6 @@
 <?php
 
-namespace TestApp\Repository;
+namespace TestApp\MichalM\Repository;
 
 trait MovieSuites
 {

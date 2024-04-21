@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repository\Movie;
+namespace App\MichalM\Repository\Movie;
 
 use MichalM\IRecord;
 

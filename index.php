@@ -1,17 +1,15 @@
 <?php
 
-use App\Repository\Movie\MovieRepository;
+use MichalM\Repository\Movie\MovieRepository;
 
 require_once __DIR__ . "/vendor/autoload.php";
 try {
-    $arrayFileAdapterDriver = new \MichalM\Drivers\ArrayFileAdapterDriver(
-        ['source' => __DIR__ . '/tests/resources/movies2.php']
-    );
-    $movieRepository = new MovieRepository($arrayFileAdapterDriver);
+    $driverFacotry = new \MichalM\DriverFactory((new \MichalM\Config())->getConfig());
+    $movieRepository = new MovieRepository($driverFacotry->getAdapterDriver());
 
-    dump($movieRepository->findWordsMoreOne()->getArrayCopy());
-    dump($movieRepository->findFirstWEventCountLetterCount()->getArrayCopy());
-    dump($movieRepository->get3Random()->getArrayCopy());
+    dump($movieRepository->findWordsMoreOne());
+    dump($movieRepository->findFirstWEventCountLetterCount());
+    dump($movieRepository->get3Random());
 } catch (\MichalM\ZadmorException $exception) {
     echo $exception->getMessage();
 }

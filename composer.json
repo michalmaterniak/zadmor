@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "commitm/zadmor": "^0.0"
+        "commitm/zadmor": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^7.0",
@@ -16,13 +16,18 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\MichalM\\": "app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TestApp\\": "tests/",
+            "TestApp\\MichalM\\": "tests/",
             "TestMichalM\\": "vendor/commitm/zadmor/tests/"
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "./vendor/bin/phpunit"
+        ]
     }
 }

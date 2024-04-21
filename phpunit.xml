@@ -18,8 +18,8 @@
     <testsuite name="Zadmor">
       <directory>tests</directory>
     </testsuite>
-<!--    <testsuite name="ZadmorVendor">-->
-<!--      <directory>vendor/commitm/zadmor/tests</directory>-->
-<!--    </testsuite>-->
+    <testsuite name="ZadmorVendor">
+      <directory>vendor/commitm/zadmor/tests</directory>
+    </testsuite>
   </testsuites>
 </phpunit>

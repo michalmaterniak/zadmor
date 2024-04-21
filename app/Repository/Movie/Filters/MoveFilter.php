@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository\Movie\Filters;
+namespace App\MichalM\Repository\Movie\Filters;
 
-use App\Repository\Movie\Movie;
+use App\MichalM\Repository\Movie\Movie;
 use MichalM\IRecord;
 use MichalM\Repository\Filters\Filter;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repository\Movie;
+namespace App\MichalM\Repository\Movie;
 
-use App\Repository\Movie\Filters\EvenCountLettersFilter;
-use App\Repository\Movie\Filters\FirstWLetterFilter;
-use App\Repository\Movie\Filters\MoreThanOneWordsFilter;
+use App\MichalM\Repository\Movie\Filters\EvenCountLettersFilter;
+use App\MichalM\Repository\Movie\Filters\FirstWLetterFilter;
+use App\MichalM\Repository\Movie\Filters\MoreThanOneWordsFilter;
 use MichalM\Repository\Repository;
 use MichalM\ZadmorException;
 

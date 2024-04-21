@@ -1,8 +1,8 @@
 <?php
 
-namespace TestApp\Repository;
+namespace TestApp\MichalM\Repository;
 
-use App\Repository\Movie\MovieRepository;
+use App\MichalM\Repository\Movie\MovieRepository;
 use MichalM\Drivers\ArrayFileAdapterDriver;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
