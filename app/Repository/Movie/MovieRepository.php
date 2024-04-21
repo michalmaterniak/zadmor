@@ -44,7 +44,8 @@ class MovieRepository extends Repository
     }
 
     /**
-     * Zwracane są 3 losowe tytuły.
+     * @return Movie[]
+     *  Zwracane są 3 losowe tytuły.
      */
     public function find3Random(): MovieCollection
     {
@@ -52,6 +53,7 @@ class MovieRepository extends Repository
     }
 
     /**
+     * @return Movie[]
      * Zwracane są wszystkie filmy na literę ‘W’ ale tylko jeśli mają parzystą liczbę znaków w tytule.
      */
     public function findFirstWEventCountLetterCount(): MovieCollection
@@ -60,6 +62,7 @@ class MovieRepository extends Repository
     }
 
     /**
+     * @return Movie[]
      * Zwracany są wszystkie tytuły, które składają się z więcej niż 1 słowa.
      */
     public function findWordsMoreOne(): MovieCollection

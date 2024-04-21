@@ -9,8 +9,8 @@ class EvenCountLettersFilter extends MoveFilter
 {
     public function check(Movie|IRecord $value): bool
     {
-        $title = trim($value->getTitle());
+        $title = $value->getTitle();
 
-        return mb_strlen($title) % 2 === 0;
+        return mb_strlen($title) % 2 === 0; // znakow, nie liter...
     }
 }
